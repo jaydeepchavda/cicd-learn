@@ -1,17 +1,26 @@
-name: First CI Pipeline
+name: multi job pipeline
 
 on: push
-
+ 
 jobs:
-  test-job:
+  build:
+    runs-on: ubuntu-latest
+
+    steps: 
+    - name: build step
+      run: echo "Building project"
+
+  test: 
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step 1 - Print Hello
-        run: echo "Hello from CI 🚀"
+    - name: test step
+      run: echo "test project"
 
-      - name: Step 2 - Check System
-        run: uname -a
+  deploy:
+    runs-on: ubuntu-latest
 
-      - name: Step 3 - Fixed Step
-        run: echo "Step is working fine ✅"
+    steps:
+    - name: build step
+      run : echo "project deploy successfully"
+
