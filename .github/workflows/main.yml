@@ -8,3 +8,5 @@ jobs:
 
     steps:
     - run: echo "hello from CI .."
+    - name: Fail Step
+      run: exit 1

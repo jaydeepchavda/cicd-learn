@@ -1,5 +1,3 @@
-<<<<<<< HEAD
 Hello CI/CD
-=======
-hello from my github action project
->>>>>>> 0b39610e4f3dcf4cea2d32d75addab5c436434e5
+
+new changes made by jd 
