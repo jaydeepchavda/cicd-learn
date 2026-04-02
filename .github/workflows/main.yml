@@ -1,12 +1,17 @@
-name: first CI
+name: First CI Pipeline
 
-on : push
+on: push
 
 jobs:
-  test:
+  test-job:
     runs-on: ubuntu-latest
 
     steps:
-    - run: echo "hello from CI .."
-    - name: Fail Step
-      run: exit 1
+      - name: Step 1 - Print Hello
+        run: echo "Hello from CI 🚀"
+
+      - name: Step 2 - Check System
+        run: uname -a
+
+      - name: Step 3 - Fixed Step
+        run: echo "Step is working fine ✅"
